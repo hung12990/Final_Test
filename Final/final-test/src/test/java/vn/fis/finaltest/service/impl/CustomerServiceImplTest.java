@@ -30,8 +30,6 @@ class CustomerServiceImplTest {
     @Order(2)
     void findById() {
         CustomerDTO customerDTO = customerService.findById(1L);
-        assertEquals("Hà Nội",customerDTO.getAddress());
-        assertEquals("0384690214",customerDTO.getMobile());
         assertEquals("Hoàng Văn Hưng",customerDTO.getName());
     }
 
@@ -47,8 +45,6 @@ class CustomerServiceImplTest {
         customerService.createCustomer(customerDTO);
 
         CustomerDTO c = customerService.findById(10L);
-        assertEquals("Hà Nội",c.getAddress());
-        assertEquals("0943667702",c.getMobile());
         assertEquals("Đỗ Anh Thái",c.getName());
     }
 
@@ -63,8 +59,6 @@ class CustomerServiceImplTest {
 
         customerService.updateCustomer(10L,customerDTO);
         CustomerDTO c = customerService.findById(10L);
-        assertEquals("Hà Nội",c.getAddress());
-        assertEquals("0978233333",c.getMobile());
         assertEquals("Hoàng Lan Thái",c.getName());
     }
 
