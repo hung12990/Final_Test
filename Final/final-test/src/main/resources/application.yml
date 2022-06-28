@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: final-test
+  datasource:
+    url: jdbc:mysql://localhost:3306/final_test_db?allowPublicKeyRetrieval=true&useSSL=false
+    username: root
+    password: root
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    hibernate.ddl-auto: none
